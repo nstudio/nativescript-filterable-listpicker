@@ -59,7 +59,7 @@ export class FilterableListpicker extends GridLayout {
                       <ListView.itemTemplate>
                           <StackLayout class="flp-row">
                               <GridLayout columns="auto, *, auto" visibility="{{title ? 'visible' : 'collapsed'}}" class="flp-row-container">
-                                  <Image src="{{image ? image : 'https://davecoffin.com/images/expert_badge.png'}}" width="30" visibility="{{image ? 'visible' : 'collapsed'}}" stretch="aspectFit" rowSpan="2" class="flp-image"></Image>
+                                  <Image src="{{image ? image : 'https://davecoffin.com/images/expert_badge.png'}}" width="30" *ngIf="image" stretch="aspectFit" rowSpan="2" class="flp-image"></Image>
                                   <StackLayout class="flp-title-container" col="1" verticalAlignment="middle">
                                       <Label text="{{title ? title : ''}}" textWrap="true" class="flp-title"></Label>
                                       <Label text="{{description ? description : ''}}" textWrap="true" visibility="{{description ? 'visible' : 'collapsed'}}" class="flp-description"></Label>
